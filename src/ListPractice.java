@@ -5,7 +5,7 @@ public class ListPractice {
 
   public static void main(String[] args) {
     
-    ArrayList<String> poolEquipment = new ArrayList<String>();
+    ArrayList<String> poolEquipment = new ArrayList<>();
     poolEquipment.add("Cue");
     poolEquipment.add("Pool Balls");
     poolEquipment.add("Chalk");

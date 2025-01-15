@@ -1,43 +1,31 @@
-
+import java.util.*;
 
 public class MapPractice {
   public static void main(String[] args) {
-    // Create a HashMap with String keys and Integer values and
-    // assign it to a variable of type Map
+    HashMap<String,Integer> contactID = new HashMap<>();
 
-    // Put 3 different key/value pairs in the Map
-    // (it's OK to do this one-by-one)
+    contactID.put("Johann",00);
+    contactID.put("Efren",01);
+    contactID.put("Francisco",02);
 
-    // Get the value associated with a given key in the Map
+    System.out.println(contactID.get("Efren"));
 
-    // Find the size (number of key/value pairs) of the Map
+    System.out.println(contactID.size());
+    
+    contactID.put("Francisco",04);
+    System.out.println(contactID.get("Francisco"));
 
-    // Replace the value associated with a given key (the size of the Map shoukld not change)
+    System.out.println("Does the HashMap Contain Efren? " + contactID.containsKey("Efren"));
+    System.out.println("Does the HashMap Contain 05? " + contactID.containsValue(05));
 
-    // Check whether the Map contains a given key
-
-    // Check whether the Map contains a given value
-
-    // Iterate over the keys of the Map, printing each key
-
-    // Iterate over the values of the map, printing each value
-
-    // Iterate over the entries in the map, printing each key and value
-
-    /*
-     * Usage tip!
-     * 
-     * Maps are great when you want a specific key to value mapping.
-     * Example: The key could be a person's name, and the value could be their phone number
-     * 
-     * However if your keys are simple ascending 0-indexed integers with no gaps
-     * (0, 1, 2, 3, 4...) then an array or List is likely a better choice.
-     * Example: If you want to store the order of songs in a playlist.
-     * 
-     * If you're finding that you're just wanting to store unordered values and the keys
-     * are unimportant, a Set may be a better choice.
-     * Example: If you want to hold the student ID numbers of everyone in a course,
-     * and you don't care about any ordering.
-     */
+    for (String i : contactID.keySet()) {
+      System.out.println(i);
+    }
+    for (Integer k : contactID.values()) {
+      System.out.println(k);
+    }
+    for (String j : contactID.keySet()) {
+      System.out.println("Keys: " + j + " Values: " + contactID.get(j));
+    }
   }
 }
