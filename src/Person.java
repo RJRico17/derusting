@@ -1,20 +1,28 @@
-/*
- * In this file you will follow the comments' instructions to complete
- * the Person class.
- */
 
 public class Person {
-  // Declare a public String instance variable for the name of the person
-  // Declare a private int instance variable for the age of the person
+  public String name;
+  private final int age;
+  
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
 
+  public String getName() {
+    return name;
+  }
 
-  // Create a constructor that takes the name and age of the person
-  // and assigns it to the instance variables
+  public int getAge() {
+    return age;
+  }
 
+  public String string() {
+    return name + age;
+  }
 
-  // Create a toString method that gives the name and age of the person
-
-
+  public int birthyear(int currentyear) {
+    return currentyear - age;
+  }
   // Implement the below public instance method "birthYear"
   // There should NOT be any print statement in this method.
   /**
@@ -31,22 +39,17 @@ public class Person {
 
 
   public static void main(String[] args) {
-    // Create an instance of Person
+    Person person1 = new Person("RJ",20);
+    Person person2 = new Person("Yao",19);
 
-    // Create another instance of Person with a different name and age and
-    // assign it to a different variable
-
-    // Print the first person
-
-    // Print the second person
-
-    // Get the name of the first person and store it in a local variable
-
-    // Using the birthYear method, get the birth year of the first person
-    // and store it in a local variable. Input the actual current year (e.g. 2025)
-    // as the argument.
-
-    // In a separate statement, print the local variable holding the birth year.
+    System.out.println(person1.string());
+    System.out.println(person2.string());
+    
+    String person1name = person1.getName();
+    System.out.println(person1name);
+    
+    int byear = person1.birthyear(2025);
+    System.out.println(byear);
 
     /**
      * Terminology!
