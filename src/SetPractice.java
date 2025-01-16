@@ -2,7 +2,7 @@ import java.util.*;
 
 public class SetPractice {
   public static void main(String[] args) {
-    HashSet<String> set = new HashSet<String>();
+    HashSet<String> set = new HashSet<>();
     set.add("Philippines");
     set.add("USA");
     set.add("Canada");
