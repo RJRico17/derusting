@@ -1,13 +1,21 @@
+import java.util.*;
+
 public class SetPractice {
   public static void main(String[] args) {
-    // Create a HashSet of Strings and assign it to a variable of type Set
+    HashSet<String> set = new HashSet<String>();
+    set.add("Philippines");
+    set.add("USA");
+    set.add("Canada");
 
-    // Add 3 elements to the set
-    // (It's OK to do it one-by-one)
+    System.out.println("Contains Philippines? " + set.contains("Philippines"));
+    
+    set.remove("USA");
 
-    // Check whether the Set contains a given String
+    System.out.println("Size of the HashSet: " + set.size());
 
-    // Remove an element from the Set
+    for (String i : set) {
+      System.out.println(i);
+    }
 
     // Get the size of the Set
 
